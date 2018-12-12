@@ -29,7 +29,7 @@ public class LoginController {
             modelMap.put("loginError", "name is not valid");
             isValid = false;
         }
-        if (StringUtils.isBlank(name)) {
+        if (StringUtils.isBlank(pass)) {
             modelMap.put("passError", "pass is not valid");
             isValid = false;
         }
@@ -47,8 +47,9 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    private String showLogin(ModelMap modelMap) {
-        modelMap.addAttribute("user", new UserLoginModels());
+    private String login(ModelMap modelMap) {
+        modelMap.addAttribute("username", new UserLoginModels().getLogin());
+        modelMap.addAttribute("password", new UserLoginModels().getPassword());
         return "login";
     }
 }

@@ -2,39 +2,30 @@ package com.task.testing.models;
 
 public class QuestionModels {
 
-    private int id;
-    private String text_question;
-    private int subjects_id;
+    private int id_quest;
+    private String name;
 
-    public QuestionModels(int id, String text_question, int subjects_id) {
-        this.id = id;
-        this.text_question = text_question;
-        this.subjects_id = subjects_id;
+    public QuestionModels(int id_quest, String name) {
+        this.id_quest = id_quest;
+        this.name = name;
     }
 
     public QuestionModels() {}
 
-    public int getId() {
-        return id;
+    public int getId_quest() {
+        return id_quest;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId_quest(int id_quest) {
+        this.id_quest = id_quest;
     }
 
-    public String getText_question() {
-        return text_question;
+    public String getName() {
+        return name;
     }
 
-    public void setText_question(String text_question) {
-        this.text_question = text_question;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getSubjects_id() {
-        return subjects_id;
-    }
-
-    public void setSubjects_id(int subjects_id) {
-        this.subjects_id = subjects_id;
-    }
 }
